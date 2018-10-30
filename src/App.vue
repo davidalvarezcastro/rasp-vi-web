@@ -1,6 +1,7 @@
 <template>
 <v-app>
     <v-content>
+      <vue-headful :title="title"/>
       <v-container fluid ma-0 pa-0 fill-height>
         <!-- Main content -->
         <appmain />
@@ -20,6 +21,12 @@ export default {
   components: {
     Navbar,
     Appmain
+  },
+
+  data (){
+    return {
+      title: process.env.VUE_APP_TITLE
+    }
   }
 };
 </script>
