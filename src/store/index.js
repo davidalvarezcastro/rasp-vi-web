@@ -1,16 +1,14 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import navbar from './modules/NavBar';
 
 Vue.use(Vuex);
 
+const debug = process.env.NODE_ENV !== 'production';
+
 export default new Vuex.Store({
-  state: {
-
+  modules: {
+    navbar
   },
-  mutations: {
-
-  },
-  actions: {
-
-  }
+  strict: debug,
 });

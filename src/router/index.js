@@ -1,17 +1,29 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from '../views/Home.vue';
+import Video from '../views/Video/index.vue';
+import Settings from '../views/Settings/index.vue';
 
 Vue.use(Router);
 
 export default new Router({
   mode: 'history',
-  base: process.env.BASE_URL,
+  base: '/',
   routes: [
     {
       path: '/',
+      redirect: '/video',
       name: 'home',
-      component: Home
+      component: Video
+    },
+    {
+      path: '/video',
+      name: 'tab-video',
+      component: Video
+    },
+    {
+      path: '/settings',
+      name: 'tab-settings',
+      component: Settings
     },
     {
       path: '/about',
